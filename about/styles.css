@@ -1,0 +1,124 @@
+:root {
+    --body-font: 'Poppins', sans-serif;
+}
+
+body {
+    padding-top: 90px;
+    font-family: var(--body-font);
+}
+
+.nav-bar {
+    background-color: #222e50;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+}
+
+.nav-title {
+    display: inline;
+    padding: 10px;
+    text-decoration: none;
+    border-right: 1mm ridge rgba(211, 220, 50, .6);
+    box-sizing: border-box;
+    font-size: 20px;
+    color: white;
+}
+
+.nav-link {
+    margin-left: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link-current {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #BCD8C1;
+    padding: 5px;
+    border: solid black;
+}
+
+.nav-link:hover {
+    color: #BCD8C1;
+    border-bottom: 2px solid #3498db;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.about {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.about img {
+    width: 100%;
+    height: 80%;
+    display: block;
+}
+
+.about-info {
+    padding: 15px;
+}
+
+.project-info p {
+    font-size: 14px;
+}
+
+.contact-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    padding: 30px;
+    background-color: #BCD8C1;
+    font-weight: bolder;
+    border-radius: 0.8rem;
+    width: 100px;
+    height: 10px;
+
+}
+
+.contact-button-link {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+    .nav-link,
+    .nav-link-current {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-button {
+        margin-left: 0;
+        padding: 15px;
+        width: auto;
+        font-size: 12px;
+    }
+
+    .about img {
+        height: auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
